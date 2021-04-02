@@ -16,7 +16,6 @@ namespace TowerSoft.HtmlToExcel {
         }
 
         internal byte[] GenerateWorkbookFromHtmlNode(IElement tableNode) {
-            ExcelPackage.LicenseContext = Settings.EpplusLicenseContext;
             using (ExcelPackage package = new ExcelPackage()) {
                 CreateSheet(package, "Sheet", tableNode);
                 return package.GetAsByteArray();

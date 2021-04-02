@@ -21,11 +21,6 @@ namespace TowerSoft.HtmlToExcel {
         public bool ShowFilter { get; set; }
 
         /// <summary>
-        /// Sets the license context for EPPluss. More info here: https://epplussoftware.com/developers/licenseexception
-        /// </summary>
-        public LicenseContext EpplusLicenseContext { get; set; }
-
-        /// <summary>
         /// Get the default settings
         /// </summary>
         public static HtmlToExcelSettings Defaults {
@@ -33,8 +28,7 @@ namespace TowerSoft.HtmlToExcel {
                 return new HtmlToExcelSettings {
                     AutofitColumns = true,
                     ShowRowStripes = true,
-                    ShowFilter = true,
-                    EpplusLicenseContext = LicenseContext.NonCommercial
+                    ShowFilter = true
                 };
             }
         }
